@@ -167,7 +167,8 @@ sgMail.send({
 (simplified example, see [full code](https://github.com/AdrianMrn/tado-temperature-notifier/blob/master/src/notifier.ts))
 
 That wraps it up!
-TODO: screenshot of incoming email
+
+<img alt="screenshot of incoming mail" src="https://user-images.githubusercontent.com/12762044/91297364-7d39a400-e79e-11ea-92a1-43509e69b4b7.png">
 
 ## Bonus round: optimization through caching
 
