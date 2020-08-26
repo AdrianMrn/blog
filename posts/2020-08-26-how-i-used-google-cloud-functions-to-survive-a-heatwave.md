@@ -252,5 +252,5 @@ My girlfriend and I have decided that we're buying a portable air conditioner ne
 ## Resources
 
 - https://shkspr.mobi/blog/2019/02/tado-api-guide-updated-for-2019/
-- Google Cloud docs
-- @sendgrid/mail docs
+- https://cloud.google.com/docs
+- https://github.com/sendgrid/sendgrid-nodejs
