@@ -2,7 +2,7 @@
 
 [See the repo on GitHub](https://github.com/AdrianMrn/tado-temperature-notifier)
 
-Disclaimer: this is the first real blogpost I've ever written. If you've got any storytelling tips or other advice, don't hesitate to let me know on Twitter @AdriaanMrn
+Disclaimer: this is the first real blogpost I've ever written. If you've got any storytelling tips or other advice, don't hesitate to let me know on Twitter [https://twitter.com/adriaanmrn](@AdriaanMrn)
 
 This summer in Belgium has been a very hot one, and we're bound to have a couple more very warm weeks during the rest of summer.
 
