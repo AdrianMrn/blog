@@ -41,4 +41,4 @@ export default {
 
 ```
 
-The only downside is that any previously saved passwords and passphrases saved using node-keytar are now inaccessible for the app, but you can still get them by opening your system's keychain application and looking for any mentions of "ray", "ssh_password_", or "private_key_".
+The only downside is that any previously saved passwords and passphrases saved using node-keytar are now inaccessible for the app, but you can still get them by opening your system's keychain application and looking for any mentions of `ray`, `ssh_password_`, or `private_key_`.
