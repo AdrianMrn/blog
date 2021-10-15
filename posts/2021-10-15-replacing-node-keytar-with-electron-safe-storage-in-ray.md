@@ -1,8 +1,8 @@
 # Replacing Keytar with Electron's safeStorage in Ray
 
-[Ray](https://freek.dev/1868-introducing-ray-a-debugging-tool-for-pragmatic-developers) is an app we built at Spatie to make debugging your applications easier and faster. Being web developers, we naturally decided to write this app in Electron, which enabled us move from nothing to a working prototype to a released product on 3 separate platforms within a matter of weeks.
+[Ray](https://freek.dev/1868-introducing-ray-a-debugging-tool-for-pragmatic-developers) is an app we built at Spatie to make debugging your applications easier and faster. Being web developers, we naturally decided to write this app in Electron, which enabled us to move from nothing to a working prototype to a released product on 3 separate platforms within a matter of weeks.
 
-About 9 months ago, [Alex](https://alexvanderbist.com/) added a [much requested feature](https://freek.dev/1921-debug-apps-running-on-remote-servers-using-ray) which allows you to connect to remote servers and receive their Ray outputs securely over SSH.
+About 9 months ago, [Alex](https://alexvanderbist.com/) added a [much requested feature](https://freek.dev/1921-debug-apps-running-on-remote-servers-using-ray) that allows you to connect to remote servers and receive their Ray outputs securely over SSH.
 
 To save the credentials to a server, we needed to find a secure way to save the password or private key passphrase. We quickly settled on `node-keytar`, a native Node.js module that leverages your system's keychain (Keychain/libsecret/Credential Vault/…) to safely store passwords, hidden from other applications and users.
 
@@ -42,5 +42,3 @@ export default {
 ```
 
 The only downside is that any previously saved passwords and passphrases saved using Keytar are now inaccessible for the app, but you can still find them by opening your system's keychain application and looking for any mentions of `ray`, `ssh_password_`, or `private_key_`. We also hope Ray wasn't the only spot you saved your server passwords.
-
-Upon opening the servers overlay, existing users will receive a notification that their credentials need to be entered again. Ray will save which servers have not had their credentials updated yet, and will display this to the user.
