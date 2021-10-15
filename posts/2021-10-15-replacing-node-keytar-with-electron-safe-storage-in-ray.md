@@ -1,5 +1,7 @@
 # Replacing Keytar with Electron's safeStorage in Ray
 
+Written by [Adriaan Marain](https://twitter.com/AdriaanMrn)
+
 [Ray](https://freek.dev/1868-introducing-ray-a-debugging-tool-for-pragmatic-developers) is an app we built at Spatie to make debugging your applications easier and faster. Being web developers, we naturally decided to write this app in Electron, which enabled us to move from nothing to a working prototype to a released product on 3 separate platforms within a matter of weeks.
 
 About 9 months ago, [Alex](https://alexvanderbist.com/) added a [much requested feature](https://freek.dev/1921-debug-apps-running-on-remote-servers-using-ray) that allows you to connect to remote servers and receive their Ray outputs securely over SSH.
