@@ -42,3 +42,5 @@ export default {
 ```
 
 The only downside is that any previously saved passwords and passphrases saved using Keytar are now inaccessible for the app, but you can still find them by opening your system's keychain application and looking for any mentions of `ray`, `ssh_password_`, or `private_key_`. We also hope Ray wasn't the only spot you saved your server passwords.
+
+Upon opening the servers overlay, existing users will receive a notification that their credentials need to be entered again. Ray will save which servers have not had their credentials updated yet, and will display this to the user.
