@@ -1,4 +1,4 @@
-# Replacing node-keytar with Electron's safeStorage in Ray
+# Replacing Keytar with Electron's safeStorage in Ray
 
 [Ray](https://freek.dev/1868-introducing-ray-a-debugging-tool-for-pragmatic-developers) is an app we built at Spatie to make debugging your applications easier and faster. Being web developers, we naturally decided to write this app in Electron, which enabled us move from nothing to a working prototype to a released product on 3 separate platforms within a matter of weeks.
 
@@ -10,7 +10,7 @@ Using a native Node module brought one major disadvantage: we couldn't easily bu
 
 Three weeks ago, on September 21, 2021, Electron 15 was released, and somewhat hidden in the release notes we found a mention to a newly added string encryption API: safeStorage ([PR](https://github.com/electron/electron/pull/30430)/[docs](https://www.electronjs.org/docs/latest/api/safe-storage)). Similarly to Keytar, Electron's safeStorage also uses the system's keychain to securely encrypt strings, but without the need for an extra dependency.
 
-We jumped at the idea of simplifying our build process and removing a dependency, and wrote this simple implementation using safeStorage and `electron-store`, with an external API inspired by `node-keytar`:
+We jumped at the idea of simplifying our build process and removing a dependency, and wrote this simple implementation using safeStorage and `electron-store`, with an external API inspired by Keytar:
 
 ```typescript
 import { safeStorage } from 'electron';
@@ -41,4 +41,4 @@ export default {
 
 ```
 
-The only downside is that any previously saved passwords and passphrases saved using node-keytar are now inaccessible for the app, but you can still get them by opening your system's keychain application and looking for any mentions of `ray`, `ssh_password_`, or `private_key_`.
+The only downside is that any previously saved passwords and passphrases saved using Keytar are now inaccessible for the app, but you can still get them by opening your system's keychain application and looking for any mentions of `ray`, `ssh_password_`, or `private_key_`.
