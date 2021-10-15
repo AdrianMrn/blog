@@ -8,7 +8,7 @@ To save the credentials to a server, we needed to find a secure way to save the 
 
 Using a native Node module brought one major disadvantage: we couldn't easily build for other platforms anymore, without running the actual build on that platform. There are some solutions provided by electron-builder, node-keytar, and other packages, but these all came with their own layer of overhead.
 
-Three weeks ago, onSeptember 21, 2021, Electron 15 was released, and somewhat hidden in the release notes we found a mention to a newly added string encryption API: safeStorage ([PR](https://github.com/electron/electron/pull/30430)/[docs](https://www.electronjs.org/docs/latest/api/safe-storage)). Similarly to node-keytar, Electron's safeStorage also uses the system's keychain to securely encrypt strings, but without the need for an extra dependency.
+Three weeks ago, on September 21, 2021, Electron 15 was released, and somewhat hidden in the release notes we found a mention to a newly added string encryption API: safeStorage ([PR](https://github.com/electron/electron/pull/30430)/[docs](https://www.electronjs.org/docs/latest/api/safe-storage)). Similarly to node-keytar, Electron's safeStorage also uses the system's keychain to securely encrypt strings, but without the need for an extra dependency.
 
 We jumped at the idea of simplifying our build process and removing a dependency, and wrote this simple implementation using safeStorage and electron-store, with an external API inspired by node-keytar:
 
